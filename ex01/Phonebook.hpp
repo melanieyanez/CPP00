@@ -1,18 +1,33 @@
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/13 19:15:11 by melanieyane       #+#    #+#             */
+/*   Updated: 2024/04/16 15:43:26 by melanieyane      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <string>
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
+
 #include "Contact.hpp"
 
-class Phonebook
-{
-	private:
-		Contact contacts[8];
+class PhoneBook {
 	public:
-		Phonebook();
-		void add_contact(void);
-		void search_contact(void);
-		void exit_function(void);
+		PhoneBook(void);
+		~PhoneBook(void);
+		void	AddContact(void);
+		void	SearchContact(void);
+	private:
+		Contact			_Contacts[8];
+		static int		_ContactCount;
+		static int		_ContactTotal;
+		void 			_CheckData(std::string text, std::string field);
+		void			_DisplayList(void);
+		void			_DisplayContact(int index);
 };
 
 #endif

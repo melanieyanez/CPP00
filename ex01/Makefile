@@ -1,6 +1,6 @@
-NAME = Phonebook
+NAME = PhoneBook
 
-SRCS = main.cpp Phonebook.cpp Contact.cpp Phonebook.hpp Contact.hpp
+SRCS = Contact.cpp PhoneBook.cpp main.cpp
 OBJS := $(SRCS:%.cpp=%.o)
 
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
